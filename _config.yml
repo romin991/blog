@@ -7,14 +7,14 @@ pygments:	true
 permalink:	/blog/:title
 
 # Setup
-title:		Thinny
+title:		romin991's blog
 tagline:	'blog'
 description:	'My personal blog.'
-url:		http://camporez.com
+url:		http://romin991.github.io/blog
 
 author:
-  name:		'Ian Camporez Brunelli'
-  url:		https://google.com/+IanCamporezBrunelli
+  name:		'Romin Adi Santoso'
+  url:		https://google.com/+romin991
 
 paginate:	5
 
@@ -41,7 +41,7 @@ social:
     
 menu:
   - title:	Home
-    url:	/
+    url:	/blog
     
   - title:	About
     url:	/about
