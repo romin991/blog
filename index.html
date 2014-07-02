@@ -1,39 +1,31 @@
 ---
 layout: default
-title: Home
+titleAfter: Stellar astronomical objects from the universe.
+meta: Discover many planets from the universe both inside and outside our Solar System.
+priority: 1.0
 ---
 
-<header class="clean" style="height: 350px; background-image: url({{ site.cover }});">
-	{% include top.html %}
-	<div id="home-title">
-		<a href="{{ site.url }}">
-			<img src="{{ site.icon }}" class="site-icon">
-		</a>
-	</div>
-</header>
-<div id="post-list">
-	{% for post in paginator.posts %}
-		<div>
-			<span class="post-date">{{ post.date | date_to_long_string }}</span>
-			<h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
-			<p class="post-description">{{ post.content | strip_html | truncatewords: 50 }}</p>
-		</div>
-		<br>
+<h1>Planets of the Universe</h1>
+<p>A planet is an astronomical object orbiting a star or stellar remnant that is massive enough to be rounded by its own gravity, is not massive enough to cause thermonuclear fusion, and has cleared its neighbouring region of planetesimals.</p>
+
+<h2>Types of Planets</h2>
+
+<ol>
+	{% for planet in site.categories.planet-type %}
+		<li>
+			<a href="{{site.baseurl}}/planets/{{planet.folder}}/">{{planet.title}}</a>
+			{{planet.content}}
+		</li>
 	{% endfor %}
-</div>
-<nav class="pagination" role="navigation">
-	{% if paginator.next_page %}
-		<a class="newer-posts" href="/page{{paginator.next_page}}">&larr; Older posts</a>
-	{% endif %}
-	<span class="page-number">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
-	{% if paginator.previous_page %}
-		{% if paginator.page == 2 %}
-			<a class="older-posts" href="/">Newer posts &rarr;</a>
-		{% else %}
-			<a class="older-posts" href="/page{{paginator.previous_page}}">Newer posts &rarr;</a>
-		{% endif %}
-	{% endif %}
-</nav>
-<footer class="clean" style="background-image: url({{ site.cover }}); background-position: bottom; height: 60px;">
-	<p class="copyright">&copy;{{ site.time | date: "%Y" }}, <a href="{{ site.copyright.url }}" target="_blank">{{ site.copyright.author }}</a>. <a href="{{ site.copyright.type_url }}" target="_blank">{{ site.copyright.type_title }}</a>.</p>
-</footer>
+</ol>
+
+<h2>Recently Discovered Planets</h2>
+
+<ul>
+	{% for news in site.categories.recently-discovered limit:2 %}
+		<li>
+			<a href="{{site.baseurl}}{{news.url}}">{{news.title}}</a>
+			<p>{{news.meta}}</p>
+		</li>
+	{% endfor %}
+</ul>
