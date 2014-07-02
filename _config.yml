@@ -2,19 +2,19 @@
 markdown:	redcarpet
 baseurl: /blog
 pygments:	true
-
+exclude: ["README.md"]
 # Permalinks
 permalink:	/blog/:title
 
 # Setup
-title:		Thinny
+title:		Romin991
 tagline:	'blog'
 description:	'My personal blog.'
-url:		http://camporez.com
+url:		http://romin991.github.io/blog
 
 author:
-  name:		'Ian Camporez Brunelli'
-  url:		https://google.com/+IanCamporezBrunelli
+  name:		'Romin Adi Santoso'
+  url:		https://google.com/+romin991
 
 paginate:	5
 
@@ -24,30 +24,28 @@ cover:		/assets/images/cover.jpg
 
 social:
   - icon:	twitter
-    url:	https://twitter.com/iancamporez
+    url:	https://twitter.com/romin991
     desc:	Follow me on twitter
 
   - icon:	github
-    url:	https://github.com/camporez
+    url:	https://github.com/romin991
     desc:	Fork me on github
 
   - icon:	googleplus-alt
-    url:	https://google.com/+IanCamporezBrunelli
+    url:	https://google.com/+romin991
     desc:	Add me on google+
 
-  - icon:	feed
-    url:	http://camporez.com/atom.xml
-    desc:	Subscribe to my feed
+ 
     
 menu:
   - title:	Home
     url:	/
     
   - title:	About
-    url:	/about
+    url:	/
     
 copyright:
-  author:	Camporez
-  url:		http://camporez.com
+  author:	Romin Adi Santoso
+  url:		http://romin991.github.io/blog
   type_title:	Some rights reserved
   type_url:	http://creativecommons.org/licenses/by-nc/2.5
